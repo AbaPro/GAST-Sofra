@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BeeTeamFragment"
+    android:background="@drawable/ashbal"
+    >
+
+    <EditText
+        android:id="@+id/scoutnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:ems="6"
+        android:hint="اكتب عدد الفريق"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/white"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/radiogroupweather"
+        app:layout_constraintBottom_toTopOf="@id/fetargroup"/>
+
+    <TextView
+        android:id="@+id/weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@id/lunchgroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/radiogroupweather" />
+
+    <RadioGroup
+
+        android:id="@+id/radiogroupweather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fetargroup"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toStartOf="@id/scoutnum"
+        >
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="حالة الطقس"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@android:color/white"
+            />
+
+        <RadioButton
+            android:id="@+id/radionormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Normal (1800cal)"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/white"
+            />
+
+        <RadioButton
+            android:id="@+id/radioactive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Active (2000cal)"
+            android:buttonTint="@color/white"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/radiovactive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Very Active (2200cal)"
+            android:buttonTint="@color/white"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/fetargroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/lunchgroup"
+        app:layout_constraintTop_toBottomOf="@id/radiogroupweather"
+        app:layout_constraintBottom_toTopOf="@id/buttonrest"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleX="0.9"
+        android:scaleY="0.9">
+
+        <TextView
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="الفطار"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:textColor="@android:color/white"
+
+            />
+        <RadioButton
+            android:id="@+id/radioButton1fetar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="فول و مربى \nوعيش"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/radioButton2fetar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="فطير و عسل"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/radioButton3fetar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="جبنة وبيض \nوعيش"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/white"/>
+        <RadioButton
+            android:id="@+id/radioButton4fetar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="فول وبيض \nوعيش"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/white"/>
+        <RadioButton
+            android:id="@+id/radioButton5fetar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="شعرية باللبن\n وبيض وعيش"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/white"/>
+    </RadioGroup>
+    <RadioGroup
+        android:id="@+id/lunchgroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/dinnergroup"
+        app:layout_constraintTop_toBottomOf="@id/radiogroupweather"
+        app:layout_constraintBottom_toTopOf="@id/buttonapply"
+        app:layout_constraintEnd_toStartOf="@id/fetargroup"
+        android:scaleX="0.9"
+        android:scaleY="0.9">
+        <TextView
+            android:id="@+id/header3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="الغذاء"
+
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:textColor="@android:color/white"
+
+            />
+
+        <RadioButton
+            android:id="@+id/radioButton1lunch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="مكرونة بالتونة"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/radioButton2lunch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="مكرونة ولحمة \nمفرومة"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/radioButton3lunch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="رز وبطاطس \nبالصلصة"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/radioButton4lunch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="رز و بسلة"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/white"/>
+        <RadioButton
+            android:id="@+id/radioButton5lunch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="رز وفراخ \nمشوية"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/white"/>
+    </RadioGroup>
+    <RadioGroup
+        android:id="@+id/dinnergroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/radiogroupweather"
+        app:layout_constraintBottom_toTopOf="@id/resultbtn"
+        app:layout_constraintEnd_toStartOf="@id/lunchgroup"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scaleX="0.9"
+        android:scaleY="0.9">
+        <TextView
+            android:id="@+id/header4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="العشاء"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:textColor="@android:color/white"
+
+
+            />
+        <RadioButton
+            android:id="@+id/radioButton1dinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تونة وعيش"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/white"/>
+
+
+        <RadioButton
+            android:id="@+id/radioButton2dinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="بطاطس مهروسة \nوحلاوة وعيش"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/radioButton3dinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="بليلة"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/white"/>
+        <RadioButton
+            android:id="@+id/radioButton4dinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="فطير وجبنة"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/white"/>
+        <RadioButton
+            android:id="@+id/radioButton5dinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="بطاطا وذرة"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:buttonTint="@color/white"/>
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/resultfetar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/resultlunch"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:textColor="@color/black"
+
+        />
+    <TextView
+        android:id="@+id/resultlunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/resultdinner"
+        app:layout_constraintEnd_toStartOf="@id/resultfetar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+
+        />
+    <TextView
+        android:id="@+id/resultdinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/resultlunch"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        />
+
+
+    <Button
+        android:id="@+id/buttonapply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="apply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lunchgroup"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        />
+
+    <Button
+        android:id="@+id/resultbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="result"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonapply"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dinnergroup"
+        android:shadowColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        />
+
+    <Button
+        android:id="@+id/buttonrest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonapply"
+        app:layout_constraintTop_toBottomOf="@id/fetargroup"
+        app:layout_constraintVertical_bias="0.555"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/resultwater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/resultlunch"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

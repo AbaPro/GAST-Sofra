@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity"
+    android:background="@drawable/result">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/fetarText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fetar"
+                android:textAlignment="center"
+                android:textColor="#FFEB3B"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/fetarfinalresult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginEnd="10px"/>
+
+            <TextView
+                android:id="@+id/lunchText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lunch"
+                android:textAlignment="center"
+                android:textColor="#FFEB3B"                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/lunchfinalresult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textStyle="bold"
+                android:layout_marginEnd="10px"/>
+
+            <TextView
+                android:id="@+id/dinnerText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dinner"
+                android:textAlignment="center"
+                android:textColor="#FFEB3B"                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/dinnerefinalresult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textStyle="bold"
+                android:layout_marginEnd="10px"/>
+            <TextView
+                android:id="@+id/waterText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="المياه"
+                android:textAlignment="center"
+                android:textColor="#FFEB3B"                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/waterfinalresult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textStyle="bold"
+                android:layout_marginEnd="10px"/>
+
+            <TextView
+                android:id="@+id/rage3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="راجع الأصناف التالية"
+                android:textColor="#FFEB3B"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="10px"/>
+
+            <TextView
+                android:id="@+id/food"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ملح,زيت,سكر,صلصة,بصل,\nطماطم,فلفل اخضر,فلفل اسود\n\nوجود snacks اختيارى على حسب تقدير القائد\n"
+                android:textStyle="bold"
+                android:layout_marginEnd="10px"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

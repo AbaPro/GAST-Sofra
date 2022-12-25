@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity"
+    android:background="@color/cardview_dark_background">
+
+    <ScrollView
+        android:id="@+id/lunchscroll"
+        android:layout_height="200dp"
+        android:layout_marginBottom="25px"
+        android:layout_marginTop="20px"
+
+        android:layout_width="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/fetarscroll"
+        app:layout_constraintStart_toEndOf="@id/dinnerscroll"
+        app:layout_constraintTop_toBottomOf="@+id/lunchText"
+        app:layout_constraintBottom_toTopOf="@id/rage3">
+
+        <TextView
+            android:id="@+id/lunchfinalresult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/lunchText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/lunch"
+        android:textAlignment="center"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/fetarText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dinnerText"/>
+
+    <TextView
+        android:id="@+id/waterText"
+        android:layout_width="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_height="wrap_content"
+        android:text="المياه"
+        android:textAlignment="center"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/dinnerText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dinnerText"
+        android:layout_width="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_height="wrap_content"
+        android:text="@string/dinner"
+        android:textAlignment="center"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/lunchText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/waterText"/>
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="200dp"
+    android:id="@+id/dinnerscroll"
+    android:layout_marginBottom="25px"
+    android:layout_marginTop="20px"
+
+    app:layout_constraintEnd_toStartOf="@+id/fetarscroll"
+    app:layout_constraintStart_toEndOf="@id/dinnerscroll"
+    app:layout_constraintTop_toBottomOf="@+id/lunchText"
+    app:layout_constraintBottom_toTopOf="@id/rage3">
+
+    <TextView
+        android:id="@+id/dinnerefinalresult"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/lunchscroll"
+        app:layout_constraintStart_toEndOf="@id/waterfinalresult"
+        app:layout_constraintTop_toBottomOf="@+id/dinnerText" />
+</ScrollView>
+
+    <TextView
+        android:id="@+id/rage3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="راجع الأصناف التالية"
+        android:layout_marginEnd="10px"
+        android:textColor="#FFEB3B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/food"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ScrollView
+        android:id="@+id/fetarscroll"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="20px"
+        android:layout_marginBottom="25px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lunchscroll"
+app:layout_constraintBottom_toTopOf="@id/rage3"
+        app:layout_constraintTop_toBottomOf="@id/fetarText"
+        >
+
+        <TextView
+            android:id="@+id/fetarfinalresult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+
+            />
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/fetarText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/fetar"
+        android:layout_marginTop="4dp"
+        android:textAlignment="center"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/lunchText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ملح,زيت,سكر,صلصة,بصل,\nطماطم,فلفل اخضر,فلفل اسود\n\nوجود snacks اختيارى على حسب تقدير القائد\n"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:layout_marginEnd="10px"
+        app:layout_constraintTop_toBottomOf="@id/rage3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ScrollView
+        android:id="@+id/waterscroll"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="20px"
+        android:layout_marginBottom="25px"
+
+        app:layout_constraintBottom_toTopOf="@id/rage3"
+        app:layout_constraintEnd_toStartOf="@id/dinnerscroll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/waterText"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/waterfinalresult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/dinnerscroll"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/waterText" />
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
