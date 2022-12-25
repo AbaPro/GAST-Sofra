@@ -22,5 +22,11 @@ choose the food that you like
 
 after clicking result you will get the amount of food you need based on your choices 
 
-
 <img src="https://user-images.githubusercontent.com/102380881/209463405-9a59f659-81a9-4fed-bf36-767229282238.jpg"  width="300" />
+
+## Download
+
+you can find an apk file you can install on your android phone.
+
+
+app/outputs/apk/app-debug.apk
